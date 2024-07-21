@@ -1,0 +1,20 @@
+---
+import { menuItems } from "../consts";
+---
+
+<ul class="menu bg-base-100 w-full m-0">
+  {
+    menuItems.map((item) => (
+      <li>
+        <a
+          class="menu-item p-4"
+          id={item.id}
+          href={item.href}
+          target={item.target || "_self"}
+        >
+          {item.text}
+        </a>
+      </li>
+    ))
+  }
+</ul>
